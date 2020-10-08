@@ -1,0 +1,53 @@
+[user]
+	name = Raphaël Pinson
+	email = raphael.pinson@camptocamp.com
+	signingkey = 10CB2A8D
+
+[alias]
+	today = log --since=midnight --author='Raphaël Pinson' --oneline
+	since = !git log $(git merge-base --fork-point master)..HEAD
+	t = tag -s
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
+	pr = !"pr() { git fetch origin pull/$1/head:pr-$1; }; pr"
+	mr = !"mr() { git fetch origin refs/merge-requests/$1/head:mr-$1; }; mr"
+	branches = !"git for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads"
+	undo = reset HEAD~
+
+[color]
+	ui = auto
+[difftool "diffpdf"]
+  cmd = diffpdf --view \"$LOCAL\" \"$REMOTE\"
+[commit]
+	gpgsign = true
+[pull]
+	ff = only
+[rebase]
+	autosquash = true
+[diff]
+  compactionHeuristic = true
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[url "git@github.com:"]
+  insteadOf = gh:
+[url "git@github.com:raphink/"]
+  insteadOf = ghr:
+[url "git@github.com:camptocamp/puppet-"]
+  insteadOf = cp:
+[push]
+	followTags = true
+	default = simple
+[help]
+	autocorrect = 1
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+[init]
+	templateDir = /home/raphink/.git-templates/git-secrets
+[format]
+	signoff = true
