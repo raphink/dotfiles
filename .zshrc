@@ -261,7 +261,5 @@ zinit light zdharma/fast-syntax-highlighting
 # Gems
 zinit ice gem'jgrep'
 
-zinit ice gem'puppet-lint'
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
