@@ -190,10 +190,10 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
 zinit light trapd00r/LS_COLORS
 alias ls='ls --color=auto'
 
-zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
-    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-    pick"direnv" src="zhook.zsh"
-zinit load direnv/direnv
+#zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
+#    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
+#    pick"direnv" src="zhook.zsh"
+#zinit load direnv/direnv
 
 zinit ice from"gh-r" as"program" mv"yq_linux_amd64 -> yq"
 zinit load mikefarah/yq
