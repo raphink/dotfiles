@@ -254,6 +254,9 @@ zinit load antonmedv/fx
 zinit ice from"gh-r" as"program"
 zinit load andreazorzetto/yh
 
+zinit ice from"gh-r" as"program" bpick"youtube-dl"
+zinit load ytdl-org/youtube-dl
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
