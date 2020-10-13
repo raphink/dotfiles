@@ -138,6 +138,7 @@ alias d='docker'
 alias t='terraform'
 alias be='bundle exec'
 alias s='summon'
+compdef summon=sudo
 
 alias l='exa'
 alias la='exa -a'
