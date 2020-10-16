@@ -227,6 +227,9 @@ zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s
 zinit ice from"gh-r" as"program"
 zinit load derailed/k9s
 
+zinit ice from"gh-r" as"program" mv"k3d-linux-amd64 -> k3d"
+zinit load rancher/k3d
+
 zinit id-as"helm" as="monitor|command" extract \
 	pick"linux-amd64/helm" \
 	dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
