@@ -260,6 +260,12 @@ zinit light sharkdp/fd
 zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
+zinit ice as"command" from"gh-r" mv"procs* -> procs" pick"usr/bin/procs"
+zinit light dalance/procs
+
+#zinit ice as"command" from"gh-r" mv"sd* -> sd" pick"sd/sd"
+#zinit light chmln/sd
+
 zinit ice from"gh-r" as"program" mv"fx-linux -> fx"
 zinit load antonmedv/fx
 
