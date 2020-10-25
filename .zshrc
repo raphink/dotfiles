@@ -254,6 +254,12 @@ zinit load alecthomas/chroma
 zinit ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
 zinit light ogham/exa
 
+zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
+zinit light sharkdp/fd
+
+zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zinit light sharkdp/bat
+
 zinit ice from"gh-r" as"program" mv"fx-linux -> fx"
 zinit load antonmedv/fx
 
