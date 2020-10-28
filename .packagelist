@@ -51,5 +51,6 @@ obs-studio
 python
 simple-scan
 recordmydesktop
+diffstat
 
 # bazel
