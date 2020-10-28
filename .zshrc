@@ -238,6 +238,7 @@ zinit load kubernetes-sigs/kustomize
 
 zinit id-as"helm" as="readurl|command" extract \
         pick"linux-amd64/helm" \
+        atload"helm plugin install https://github.com/databus23/helm-diff" \
         dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
         for https://github.com/helm/helm/releases/
 
