@@ -236,10 +236,10 @@ zinit load rancher/k3d
 zinit ice from"gh-r" as"program"
 zinit load kubernetes-sigs/kustomize
 
-zinit id-as"helm" as="monitor|command" extract \
-	pick"linux-amd64/helm" \
-	dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
-	for https://github.com/helm/helm/releases/
+zinit id-as"helm" as="readurl|command" extract \
+        pick"linux-amd64/helm" \
+        dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
+        for https://github.com/helm/helm/releases/
 
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
