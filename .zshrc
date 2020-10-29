@@ -216,7 +216,7 @@ zinit load cyberark/summon
 zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
 zinit load mozilla/sops
 
-zinit ice from"gh-r" ver"v1.10.1" as"program" bpick"*-linux-amd64.tar.gz" \
+zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
     atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
     pick"gopass-*/gopass"
 zinit load gopasspw/gopass
