@@ -279,6 +279,9 @@ zinit load antonmedv/fx
 zinit ice from"gh-r" as"program"
 zinit load andreazorzetto/yh
 
+zinit ice from"gh-r" as"program"
+zinit load mikefarah/yq
+
 zinit ice from"gh-r" as"program" bpick"youtube-dl"
 zinit load ytdl-org/youtube-dl
 
