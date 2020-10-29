@@ -178,6 +178,9 @@ zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
+# ssh-agent add
+zstyle :omz:plugins:ssh-agent identities id_rsa_perso
+
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
@@ -236,11 +239,11 @@ zinit load rancher/k3d
 zinit ice from"gh-r" as"program"
 zinit load kubernetes-sigs/kustomize
 
-zinit id-as"helm" as="readurl|command" extract \
-        pick"linux-amd64/helm" \
-        atload"helm plugin install https://github.com/databus23/helm-diff" \
-        dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
-        for https://github.com/helm/helm/releases/
+#zinit id-as"helm" as="readurl|command" extract \
+#        pick"linux-amd64/helm" \
+#        dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
+#        for https://github.com/helm/helm/releases/
+        #atload"helm plugin install https://github.com/databus23/helm-diff" \
 
 zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
 zinit load roboll/helmfile
