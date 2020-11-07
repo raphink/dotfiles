@@ -29,7 +29,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -217,8 +217,8 @@ zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
 zinit load mozilla/sops
 
 zinit ice from"gh-r" ver"v1.9.2" as"program" bpick"*-linux-amd64.tar.gz" \
-    atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
     pick"gopass-*/gopass"
+    #atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
 zinit load gopasspw/gopass
 
 #zinit id-as"openshift-client" as"monitor|command" extract \
