@@ -80,6 +80,10 @@ endif
 " github-dashboard
 "Plug 'junegunn/vim-github-dashboard'
 
+" yaml revealer
+Plug 'Einenlum/yaml-revealer'
+
+
 call plug#end()
 
 "
