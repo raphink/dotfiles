@@ -20,6 +20,7 @@
   cmd = diffpdf --view \"$LOCAL\" \"$REMOTE\"
 [commit]
 	gpgsign = true
+	template = /home/raphink/.git-templates/commit-template
 [pull]
 	ff = only
 [rebase]
