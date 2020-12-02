@@ -52,5 +52,8 @@ python
 simple-scan
 recordmydesktop
 diffstat
+uuid
+ttf-mscorefonts-installer
+npm
 
 # bazel
