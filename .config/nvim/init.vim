@@ -3,6 +3,8 @@ call plug#begin('~/.config/nvim/plugged')
 " vim-puppet + recommended
 Plug 'rodjek/vim-puppet'
 
+Plug 'hashivim/vim-terraform'
+
 Plug 'vim-syntastic/syntastic'
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
