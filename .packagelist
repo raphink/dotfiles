@@ -58,6 +58,7 @@ npm
 pandoc
 texlive-latex-recommended
 texlive-latex-extra
+texlive-luatex
 
 
 # bazel
