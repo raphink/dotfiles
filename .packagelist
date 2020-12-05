@@ -55,5 +55,9 @@ diffstat
 uuid
 ttf-mscorefonts-installer
 npm
+pandoc
+texlive-latex-recommended
+texlive-latex-extra
+
 
 # bazel
