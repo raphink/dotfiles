@@ -285,6 +285,9 @@ zinit load mikefarah/yq
 zinit ice from"gh-r" as"program" bpick"youtube-dl"
 zinit load ytdl-org/youtube-dl
 
+zinit ice from"gh-r" as"program" pick"bin/dog"
+zinit load ogham/dog
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
