@@ -64,5 +64,6 @@ remmina
 python3-virtualenv
 ffmpeg
 audacity
+pitivi
 
 # bazel
