@@ -62,5 +62,7 @@ texlive-luatex
 texlive-lang-french
 remmina
 python3-virtualenv
+ffmpeg
+audacity
 
 # bazel
