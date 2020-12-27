@@ -288,6 +288,9 @@ zinit load ytdl-org/youtube-dl
 zinit ice from"gh-r" as"program" pick"bin/dog"
 zinit load ogham/dog
 
+zinit ice from"gh-r" as"program" pick"usr/local/bin/bin/glab"
+zinit load profclems/glab
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
