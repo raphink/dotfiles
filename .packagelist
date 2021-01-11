@@ -60,6 +60,7 @@ texlive-latex-recommended
 texlive-latex-extra
 texlive-luatex
 texlive-lang-french
+texlive-humanities
 remmina
 python3-virtualenv
 ffmpeg
