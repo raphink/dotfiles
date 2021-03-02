@@ -68,5 +68,7 @@ audacity
 pitivi
 fontforge
 git-lfs
+ffmpegthumbnailer
 
 # bazel
+
