@@ -12,6 +12,8 @@ let g:syntastic_check_on_wq = 0
 Plug 'honza/vim-snippets'
 Plug 'preservim/tagbar'
 
+Plug 'sebdah/vim-delve'
+
 " Nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nmap <C-n> :NERDTreeToggle<CR>
