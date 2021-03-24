@@ -291,6 +291,9 @@ zinit load ogham/dog
 zinit ice from"gh-r" as"program" pick"usr/local/bin/bin/glab"
 zinit load profclems/glab
 
+zinit ice from"gh-r" as"program" pick"usr/bin/gh"
+zinit load cli/cli
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
