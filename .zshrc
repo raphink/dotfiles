@@ -294,6 +294,9 @@ zinit load profclems/glab
 zinit ice from"gh-r" as"program" pick"usr/bin/gh"
 zinit load cli/cli
 
+zinit ice from"gh-r" as"program" pick"usr/local/bin/exo"
+zinit load exoscale/cli
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
