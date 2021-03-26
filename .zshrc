@@ -306,6 +306,7 @@ zinit light zdharma/fast-syntax-highlighting
 # Gems
 zinit ice gem'!jgrep'
 zinit ice gem'!github_changelog_generator'
+zinit ice gem'!travis'
 zinit load zdharma/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
