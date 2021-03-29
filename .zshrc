@@ -297,6 +297,9 @@ zinit load cli/cli
 zinit ice from"gh-r" as"program" pick"usr/local/bin/exo"
 zinit load exoscale/cli
 
+zinit ice from"gh-r" as"program" mv"terraform-docs-v*-linux-amd64 -> terraform-docs"
+zinit load terraform-docs/terraform-docs
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
