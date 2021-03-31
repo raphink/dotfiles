@@ -300,6 +300,9 @@ zinit load exoscale/cli
 zinit ice from"gh-r" as"program" mv"terraform-docs-v*-linux-amd64 -> terraform-docs"
 zinit load terraform-docs/terraform-docs
 
+zinit ice from"gh-r" as"program" pick"usr/local/bin/helm-docs"
+zinit load norwoodj/helm-docs
+
 zinit ice from"gh-r" as"program" mv"lsd-*-x86_64-unknown-linux-gnu -> lsd" pick"lsd/lsd"
 zinit load Peltoche/lsd
 
