@@ -207,7 +207,7 @@ zinit load mikefarah/yq
 zinit ice from"gh-r" as"program"
 zinit load simulot/aspiratv
 
-zinit ice from"gh-r" as"program" mv"argocd-linux-amd64 -> argocd"
+zinit ice from"gh-r" ver"v1.7.14" as"program" mv"argocd-linux-amd64 -> argocd"
 zinit load argoproj/argo-cd
 
 zinit ice from"gh-r" as"program"
