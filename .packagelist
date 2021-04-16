@@ -69,6 +69,7 @@ pitivi
 fontforge
 git-lfs
 ffmpegthumbnailer
+solaar
 
 # bazel
 
