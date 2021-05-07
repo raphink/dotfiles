@@ -312,6 +312,10 @@ zinit load norwoodj/helm-docs
 zinit ice from"gh-r" as"program" mv"lsd-*-x86_64-unknown-linux-gnu -> lsd" pick"lsd/lsd"
 zinit load Peltoche/lsd
 
+#zinit ice from"gh-r" as"program"
+#zinit load jrhouston/tfk8s
+
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
