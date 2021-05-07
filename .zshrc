@@ -242,6 +242,9 @@ zinit load rancher/k3d
 zinit ice from"gh-r" as"program"
 zinit load kubernetes-sigs/kustomize
 
+zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-x86_64.AppImage -> zettlr"
+zinit load Zettlr/Zettlr
+
 #zinit id-as"helm" as="readurl|command" extract \
 #        pick"linux-amd64/helm" \
 #        dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
