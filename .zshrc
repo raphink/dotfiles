@@ -315,6 +315,8 @@ zinit load Peltoche/lsd
 #zinit ice from"gh-r" as"program"
 #zinit load jrhouston/tfk8s
 
+zinit ice from"gh-r" as"program"
+zinit load gomatic/renderizer
 
 
 # Two regular plugins loaded without investigating.
