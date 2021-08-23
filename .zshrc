@@ -97,6 +97,7 @@ plugins=(
   kubectl helm
 )
 autoload -U compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 source $ZSH/oh-my-zsh.sh
 
