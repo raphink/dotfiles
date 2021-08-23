@@ -98,6 +98,7 @@ plugins=(
 )
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
+source /usr/share/bash-completion/completions/az
 
 source $ZSH/oh-my-zsh.sh
 
