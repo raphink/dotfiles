@@ -1,0 +1,8 @@
+[user]
+	name = Raphaël Pinson
+	email = raphink@gmail.com
+	signingkey = 10CB2A8D
+
+[commit]
+	gpgsign = true
+	template = /home/raphink/.git-templates/raphink-commit-template
