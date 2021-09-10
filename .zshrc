@@ -320,6 +320,9 @@ zinit load Peltoche/lsd
 zinit ice from"gh-r" as"program"
 zinit load gomatic/renderizer
 
+zinit ice from"gh-r" as"program" mv"opa_linux_amd64 -> opa"
+zinit load open-policy-agent/opa
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
