@@ -323,6 +323,9 @@ zinit load gomatic/renderizer
 zinit ice from"gh-r" as"program" mv"opa_linux_amd64 -> opa"
 zinit load open-policy-agent/opa
 
+zinit ice from"gh-r" as"program" mv"kind-linux-amd64 -> kind"
+zinit load kubernetes-sigs/kind
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
