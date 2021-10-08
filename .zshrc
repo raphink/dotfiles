@@ -98,7 +98,7 @@ plugins=(
 )
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source /usr/share/bash-completion/completions/az
+source /etc/bash_completion.d/azure-cli
 
 source $ZSH/oh-my-zsh.sh
 
