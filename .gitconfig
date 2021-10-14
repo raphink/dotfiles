@@ -41,7 +41,7 @@
 	followTags = true
 	default = simple
 [help]
-	autocorrect = 1
+	autoCorrect = 30
 
 [includeIf "gitdir:~/src/github.com/raphink/CV/"]
 	path = ~/.gitconfig-raphink
