@@ -153,9 +153,9 @@ alias ls='lsd --color=auto'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
@@ -167,10 +167,10 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
+    zdharma-continuum/z-a-rust \
+    zdharma-continuum/z-a-as-monitor \
+    zdharma-continuum/z-a-patch-dl \
+    zdharma-continuum/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
 
@@ -190,7 +190,7 @@ zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
 zinit ice as"program" pick"bin/git-dsf"
-zinit light zdharma/zsh-diff-so-fancy
+zinit light zdharma-continuum/zsh-diff-so-fancy
 
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
@@ -326,17 +326,19 @@ zinit load open-policy-agent/opa
 zinit ice from"gh-r" as"program" mv"kind-linux-amd64 -> kind"
 zinit load kubernetes-sigs/kind
 
+zinit ice from"gh-r" as"program"
+zinit load nektos/act
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # Gems
 zinit ice gem'!jgrep'
 zinit ice gem'!github_changelog_generator'
 zinit ice gem'!travis'
-zinit load zdharma/null
+zinit load zdharma-continuum/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
