@@ -329,6 +329,9 @@ zinit load kubernetes-sigs/kind
 zinit ice from"gh-r" as"program"
 zinit load nektos/act
 
+zinit ice from"gh-r" as"program"
+zinit load goreleaser/goreleaser
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
