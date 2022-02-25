@@ -1,4 +1,3 @@
-hexchat
 htop
 mlocate
 libreoffice
@@ -9,7 +8,6 @@ gh
 vim
 make
 zsh
-cheese
 chrome-gnome-shell
 gnome-tweaks
 zsh-completions
@@ -17,20 +15,10 @@ neovim
 gcc
 flameshot
 python3-pip
-exuberant-ctags
-ruby-bundler
-ruby-dev
-libaugeas-dev
 indent
 diffpdf
 git-secrets
-install
-pdk
 whois
-samba-common
-gpick
-install
-augeas-tools
 iotop
 pwgen
 jq
@@ -47,7 +35,6 @@ texlive-font-utils
 speedtest-cli
 inkscape
 gimp
-obs-studio
 python
 simple-scan
 recordmydesktop
@@ -62,18 +49,6 @@ texlive-luatex
 texlive-lang-french
 texlive-humanities
 remmina
-python3-virtualenv
 ffmpeg
-audacity
-pitivi
-fontforge
-git-lfs
-ffmpegthumbnailer
 solaar
-
-# bazel
-
-gitg
-texlive-fonts-extra
 ocrmypdf
-
