@@ -43,9 +43,7 @@
 [help]
 	autoCorrect = 30
 
-[includeIf "gitdir:~/src/github.com/raphink/CV/"]
-	path = ~/.gitconfig-raphink
-[includeIf "gitdir:~/"]
+[includeIf "gitdir:~/src/github.com/raphink/"]
 	path = ~/.gitconfig-raphink
 
 #[secrets]
