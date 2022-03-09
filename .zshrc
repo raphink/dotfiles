@@ -335,6 +335,9 @@ zinit load goreleaser/goreleaser
 zinit ice from"gh-r" as"program"
 zinit load cilium/cilium-cli
 
+zinit ice from"gh-r" as"program"
+zinit load instruqt/cli
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
