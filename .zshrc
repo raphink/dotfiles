@@ -338,6 +338,9 @@ zinit load cilium/cilium-cli
 zinit ice from"gh-r" as"program"
 zinit load instruqt/cli
 
+zinit ice from"gh-r" as"program"
+zinit load hashicorp/packer
+
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit ice atinit'zicompinit'
