@@ -352,5 +352,9 @@ zinit ice gem'!github_changelog_generator'
 zinit ice gem'!travis'
 zinit load zdharma-continuum/null
 
+function sysdump-kas() {
+  docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 quay.io/isovalent-dev/sysdump-kas:latest
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
