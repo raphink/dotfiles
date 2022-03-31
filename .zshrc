@@ -356,6 +356,11 @@ zinit ice gem'!github_changelog_generator'
 zinit ice gem'!travis'
 zinit load zdharma-continuum/null
 
+
+# Zfz
+zinit pack for fzf
+
+
 function sysdump-kas() {
   docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 quay.io/isovalent-dev/sysdump-kas:latest
 }

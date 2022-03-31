@@ -15,33 +15,44 @@
 	branches = !"git for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads"
 	undo = reset HEAD~
 
-[color]
-	ui = auto
-[difftool "diffpdf"]
-  cmd = diffpdf --view \"$LOCAL\" \"$REMOTE\"
 [commit]
 	gpgsign = true
 	template = /home/raphink/.git-templates/commit-template
-[pull]
-	ff = only
-[rebase]
-	autosquash = true
+
+[color]
+	ui = auto
+
 [diff]
   compactionHeuristic = true
 	algorithm = histogram
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	tool = difftastic
+	external = difft
+[difftool]
+	prompt = false
+[difftool "diffpdf"]
+  cmd = diffpdf --view "$LOCAL" "$REMOTE"
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
+#[core]
+#	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pull]
+	ff = only
+[push]
+	followTags = true
+	default = simple
+[rebase]
+	autosquash = true
+
+[help]
+	autoCorrect = 30
+
 [url "git@github.com:"]
   insteadOf = gh:
 [url "git@github.com:raphink/"]
   insteadOf = ghr:
-[url "git@github.com:camptocamp/puppet-"]
-  insteadOf = cp:
-[push]
-	followTags = true
-	default = simple
-[help]
-	autoCorrect = 30
 
 [includeIf "gitdir:~/src/github.com/raphink/"]
 	path = ~/.gitconfig-raphink
