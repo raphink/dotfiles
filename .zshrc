@@ -364,5 +364,8 @@ function sysdump-k9s() {
   docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -e TERM=xterm-256color -ti quay.io/isovalent-dev/sysdump-kas:k9s
 }
 
+# Rust
+source $HOME/.cargo/env
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
