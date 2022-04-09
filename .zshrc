@@ -344,6 +344,9 @@ zinit load hashicorp/packer
 zinit ice from"gh-r" as"program" mv"rke_linux-amd64 -> rke"
 zinit load rancher/rke
 
+zinit ice from"gh-r" as"program"
+zinit load juruen/rmapi
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
