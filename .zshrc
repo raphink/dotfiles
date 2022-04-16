@@ -350,8 +350,11 @@ zinit load rancher/rke
 zinit ice from"gh-r" as"program"
 zinit load juruen/rmapi
 
-zinit ice from"gh-r" as"program" pick"usr/bin/httpie"
+zinit ice from"gh-r" as"program"
 zinit load httpie/httpie
+
+zinit ice from"gh-r" as"program" bpick"*_linux_x86_64.tar.gz"
+zinit load charmbracelet/glow
 
 
 # Two regular plugins loaded without investigating.
