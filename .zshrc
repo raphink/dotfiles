@@ -350,6 +350,9 @@ zinit load rancher/rke
 zinit ice from"gh-r" as"program"
 zinit load juruen/rmapi
 
+zinit ice from"gh-r" as"program" pick"usr/bin/httpie"
+zinit load httpie/httpie
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
