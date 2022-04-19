@@ -370,7 +370,8 @@ zinit load zdharma-continuum/null
 
 
 # Zfz
-zinit pack for fzf
+zinit pack"default+keys" for fzf
+
 
 
 function sysdump-kas() {
