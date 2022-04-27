@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# From https://unix.stackexchange.com/a/604082/1151
+
+# This created something I could see in OBS.  Set it as the monitor device in Settings->Audio.  Then
+# turn on monitoring for the microphone and the video.
+
+pactl load-module module-null-sink sink_name=Virtual-Speaker sink_properties=device.description=Virtual-Speaker
+
+# Now I need to take the monitor stream from the Virtual-Speaker and turn it into a source that Zoom can use
+# as a microphone.
+
+pactl load-module module-remap-source source_name=Remap-Source master=Virtual-Speaker.monitor
