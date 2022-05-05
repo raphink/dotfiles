@@ -45,6 +45,10 @@ let g:go_info_mode='gopls'
 " Git
 Plug 'tpope/vim-fugitive'
 
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " JSON
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
