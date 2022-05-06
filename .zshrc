@@ -203,7 +203,7 @@ alias ls='ls --color=auto'
 #    pick"direnv" src="zhook.zsh"
 #zinit load direnv/direnv
 
-zinit ice from"gh-r" as"program" mv"yq_linux_amd64 -> yq"
+zinit ice from"gh-r" as"program" bpick"yq_linux_amd64.tar.gz" mv"yq_linux_amd64 -> yq"
 zinit load mikefarah/yq
 
 zinit ice from"gh-r" as"program"
