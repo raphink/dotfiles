@@ -340,6 +340,9 @@ zinit ice from"gh-r" as"program"
 zinit load cilium/hubble
 
 zinit ice from"gh-r" as"program"
+zinit load cilium/tetragon
+
+zinit ice from"gh-r" as"program"
 zinit load instruqt/cli
 
 zinit ice from"gh-r" as"program"
