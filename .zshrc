@@ -315,6 +315,10 @@ zinit ice from"gh-r" as"program" bpick"lsd-*-x86_64-unknown-linux-gnu.tar.gz" \
   mv"lsd-*-x86_64-unknown-linux-gnu -> lsd" pick"lsd/lsd"
 zinit load Peltoche/lsd
 
+zinit ice from"gh-r" as"program" bpick"krew-linux_amd64.tar.gz" \
+  mv"krew-linux_amd64 -> krew" pick"krew"
+zinit load kubernetes-sigs/krew 
+
 #zinit ice from"gh-r" as"program"
 #zinit load jrhouston/tfk8s
 
