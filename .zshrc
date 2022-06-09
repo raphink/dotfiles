@@ -366,6 +366,14 @@ zinit load httpie/httpie
 zinit ice from"gh-r" as"program" bpick"*_linux_x86_64.tar.gz"
 zinit load charmbracelet/glow
 
+zinit ice from"gh-r" as"program" \
+  bpick"cfssl_*_linux_amd64" mv"cfssl_*_linux_amd64 -> cfssl"
+zinit load cloudflare/cfssl
+
+#zinit ice from"gh-r" as"program" \
+#  bpick"cfssljson_*_linux_amd64" mv"cfssljson_*_linux_amd64 -> cfssljson" \
+#zinit load cloudflare/cfssl
+
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
