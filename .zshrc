@@ -397,7 +397,7 @@ function sysdump-kas() {
 }
 
 function sysdump-k9s() {
-  docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -ti quay.io/isovalent-dev/sysdump-kas:k9s
+  docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 -ti quay.io/isovalent-dev/sysdump-kas:k9s
 }
 
 # Rust
