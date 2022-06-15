@@ -234,7 +234,7 @@ zinit load gopasspw/gopass
 zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
 #zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 # https://github.com/aws/aws-cli/issues/6920
-zinit snippet https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+zinit snippet https://storage.googleapis.com/kubernetes-release/release/v1.24.1/bin/linux/amd64/kubectl
 
 zinit ice from"gh-r" as"program" bpick"k9s_Linux_x86_64.tar.gz"
 zinit load derailed/k9s
