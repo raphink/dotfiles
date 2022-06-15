@@ -391,8 +391,9 @@ zinit load zdharma-continuum/null
 
 
 # Zfz
+zinit ice from"gh-r" as"program"
+zinit load junegunn/fzf
 zinit pack"default+keys" for fzf
-
 
 
 function sysdump-kas() {
