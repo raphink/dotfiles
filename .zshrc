@@ -183,6 +183,8 @@ zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 # ssh-agent add
 zstyle :omz:plugins:ssh-agent identities id_rsa_perso
 
+zstyle ':completion' menu select
+
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
