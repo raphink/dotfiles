@@ -335,6 +335,10 @@ zinit load open-policy-agent/opa
 zinit ice from"gh-r" as"program" mv"kind-linux-amd64 -> kind"
 zinit load kubernetes-sigs/kind
 
+zinit ice from"gh-r" as"program" \
+  bpick"talosctl-linux-amd64" mv"talosctl-linux-amd64 -> talosctl"
+zinit load siderolabs/talos
+
 zinit ice from"gh-r" as"program"
 zinit load nektos/act
 
