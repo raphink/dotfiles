@@ -377,6 +377,9 @@ zinit ice from"gh-r" as"program" \
   bpick"cfssl_*_linux_amd64" mv"cfssl_*_linux_amd64 -> cfssl"
 zinit load cloudflare/cfssl
 
+zinit ice from"gh-r" as"program"
+zinit load bitnami-labs/sealed-secrets
+
 #zinit ice from"gh-r" as"program" \
 #  bpick"cfssljson_*_linux_amd64" mv"cfssljson_*_linux_amd64 -> cfssljson" \
 #zinit load cloudflare/cfssl
