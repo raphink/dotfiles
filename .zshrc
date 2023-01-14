@@ -355,7 +355,7 @@ zinit load cilium/hubble
 zinit ice from"gh-r" as"program"
 zinit load cilium/tetragon
 
-zinit ice from"gh-r" as"program"
+zinit ice from"gh-r" as"program" bpick"*linux*.zip"
 zinit load instruqt/cli
 
 zinit ice from"gh-r" as"program"
