@@ -285,7 +285,7 @@ zinit light dalance/procs
 zinit ice as"command" from"gh-r" mv"sd* -> sd" pick"sd/sd"
 zinit light chmln/sd
 
-zinit ice from"gh-r" as"program" mv"fx-linux -> fx"
+zinit ice from"gh-r" as"program" mv"fx_linux_amd64 -> fx"
 zinit load antonmedv/fx
 
 zinit ice from"gh-r" as"program"
