@@ -245,7 +245,7 @@ zinit load imhotepio/k9salpha
 zinit ice from"gh-r" as"program" mv"k3d-linux-amd64 -> k3d"
 zinit load k3d-io/k3d
 
-zinit ice from"gh-r" as"program"
+zinit ice from"gh-r" as"program" bpick"*_linux_amd64_*"
 zinit load kubernetes-sigs/kustomize
 
 zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-x86_64.AppImage -> zettlr"
