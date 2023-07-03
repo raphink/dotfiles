@@ -25,18 +25,18 @@
 [diff]
   compactionHeuristic = true
 	algorithm = histogram
-	tool = difftastic
-	external = difft
-[difftool]
-	prompt = false
+#	tool = difftastic
+#	external = difft
+#[difftool]
+#	prompt = false
 [difftool "diffpdf"]
   cmd = diffpdf --view "$LOCAL" "$REMOTE"
-[difftool "difftastic"]
-	cmd = difft "$LOCAL" "$REMOTE"
+#[difftool "difftastic"]
+#	cmd = difft "$LOCAL" "$REMOTE"
 [pager]
 	difftool = true
-#[core]
-#	pager = diff-so-fancy | less --tabs=4 -RFX
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [pull]
 	ff = only
@@ -75,3 +75,9 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

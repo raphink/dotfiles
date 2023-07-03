@@ -374,18 +374,18 @@ zinit ice from"gh-r" as"program" bpick"*_linux_x86_64.tar.gz"
 zinit load charmbracelet/glow
 
 zinit ice from"gh-r" as"program" \
-  bpick"cfssl_*_linux_amd64" mv"cfssl_*_linux_amd64 -> cfssl"
+bpick"cfssl_*_linux_amd64" mv"cfssl_*_linux_amd64 -> cfssl"
 zinit load cloudflare/cfssl
 
 zinit ice from"gh-r" as"program"
 zinit load bitnami-labs/sealed-secrets
 
 zinit ice from"gh-r" as"program" \
-  bpick"kubeval-linux-amd64.tar.gz" pick"kubeval"
+bpick"kubeval-linux-amd64.tar.gz" pick"kubeval"
 zinit load instrumenta/kubeval
 
 zinit ice from"gh-r" as"program" \
-  bpick"kubectl-cilium_*_linux_amd64.tar.gz"
+bpick"kubectl-cilium_*_linux_amd64.tar.gz"
 zinit load bmcustodio/kubectl-cilium
 
 zinit ice from"gh-r" as"program"
@@ -415,7 +415,7 @@ zinit pack"default+keys" for fzf
 
 
 function sysdump-kas() {
-  docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 quay.io/isovalent-dev/sysdump-kas:latest
+docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 quay.io/isovalent-dev/sysdump-kas:latest
 }
 
 function sysdump-k9s() {
@@ -424,6 +424,9 @@ function sysdump-k9s() {
 
 # Rust
 source $HOME/.cargo/env
+
+# Instruqt
+alias instruqt-dev=~/src/github.com/isovalent/instruqt/tracks/scripts/instruqt-dev.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

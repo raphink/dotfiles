@@ -1,3 +1,14 @@
+# GTK has rewritten this file to add the line:
+
+include "%L"
+
+# This is necessary to add your own Compose sequences
+# in addition to the builtin sequences of GTK. If this
+# is not what you want, just remove that line.
+#
+# A backup of the previous file contents has been made.
+
+
 # https://github.com/kragen/xcompose/pull/33
 # Narrow no-break space, needed for some Latin languages like French
 <Multi_key> <space> <n> : " "    U202f # NARROW NO-BREAK SPACE
