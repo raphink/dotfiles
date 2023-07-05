@@ -90,7 +90,7 @@ plugins=(
   colorize
   gpg-agent ssh-agent
   dirhistory
-  git git-auto-fetch
+  git git-auto-fetch gh
   golang
   ruby bundler gem rake
   docker docker-compose
