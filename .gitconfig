@@ -9,6 +9,7 @@
 	t = tag -s
 	please = push --force-with-lease
 	commend = commit --amend --no-edit
+	tidy = !"git branch --merge | grep -v main | grep -v master | xargs git branch -d"
 	tag-sort = tag --sort v:refname
 	pr = !"pr() { git fetch origin pull/$1/head:pr-$1; }; pr"
 	mr = !"mr() { git fetch origin refs/merge-requests/$1/head:mr-$1; }; mr"
