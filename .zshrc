@@ -297,6 +297,9 @@ zinit load mikefarah/yq
 zinit ice from"gh-r" as"program" bpick"youtube-dl"
 zinit load ytdl-org/youtube-dl
 
+zinit ice from"gh-r" as"program" bpick"yt-dlp_linux" mv"yt-dlp_linux -> yt-dlp"
+zinit load yt-dlp/yt-dlp
+
 zinit ice from"gh-r" as"program" pick"bin/dog"
 zinit load ogham/dog
 
