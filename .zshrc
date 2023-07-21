@@ -349,7 +349,7 @@ zinit ice from"gh-r" as"program"
 zinit load goreleaser/goreleaser
 
 # Pin version to avoid rollback to v0.10 branch on support releases
-zinit ice from"gh-r" ver"v0.15.0" as"program"
+zinit ice from"gh-r" ver"v0.15.4" as"program"
 zinit load cilium/cilium-cli
 
 zinit ice from"gh-r" as"program"
