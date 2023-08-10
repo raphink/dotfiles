@@ -15,6 +15,7 @@
 	mr = !"mr() { git fetch origin refs/merge-requests/$1/head:mr-$1; }; mr"
 	branches = !"git for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads"
 	undo = reset HEAD~
+	diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 
 [commit]
 	gpgsign = true
@@ -38,6 +39,7 @@
 	difftool = true
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	attributesfile = ~/.gitattributes
 
 [pull]
 	ff = only
@@ -82,3 +84,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[diff "image"]
+	command = /home/raphink/src/github.com/ewanmellor/git-diff-image/git_diff_image
