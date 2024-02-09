@@ -394,6 +394,9 @@ zinit load bmcustodio/kubectl-cilium
 zinit ice from"gh-r" as"program"
 zinit load fluxcd/flux2
 
+zinit ice from"gh-r" as"program"
+zinit load "opentofu/opentofu"
+
 #zinit ice from"gh-r" as"program" \
 #  bpick"cfssljson_*_linux_amd64" mv"cfssljson_*_linux_amd64 -> cfssljson" \
 #zinit load cloudflare/cfssl
@@ -433,3 +436,5 @@ alias instruqt-dev=~/src/github.com/isovalent/instruqt/tracks/scripts/instruqt-d
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
