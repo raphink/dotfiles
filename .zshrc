@@ -151,6 +151,18 @@ alias ll='lsd -lah'
 alias ls='lsd --color=auto'
 
 
+## Useful variables for installs
+platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
+architecture="$(uname -m)"
+case $architecture in
+  x86_64)
+    arch="amd64"
+    ;;
+  arm64)
+    arch="aarch64"
+    ;;
+esac
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -205,13 +217,13 @@ alias ls='ls --color=auto'
 #    pick"direnv" src="zhook.zsh"
 #zinit load direnv/direnv
 
-zinit ice from"gh-r" as"program" bpick"yq_linux_amd64.tar.gz" mv"yq_linux_amd64 -> yq"
+zinit ice from"gh-r" as"program" bpick"yq_${platform}_${arch}.tar.gz" mv"yq_${platform}_${arch} -> yq"
 zinit load mikefarah/yq
 
 zinit ice from"gh-r" as"program"
 zinit load simulot/aspiratv
 
-zinit ice from"gh-r" ver"v2.1.0" as"program" mv"argocd-linux-amd64 -> argocd"
+zinit ice from"gh-r" ver"v2.1.0" as"program" mv"argocd-${platform}-${arch} -> argocd"
 zinit load argoproj/argo-cd
 
 zinit ice from"gh-r" as"program"
@@ -220,49 +232,49 @@ zinit load cyberark/summon
 zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
 zinit load mozilla/sops
 
-zinit ice from"gh-r" ver"v1.11.0" as"program" bpick"*-linux-amd64.tar.gz" \
+zinit ice from"gh-r" ver"v1.11.0" as"program" bpick"*-${platform}-${arch}.tar.gz" \
     pick"gopass-*/gopass"
     #atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
 zinit load gopasspw/gopass
 
 #zinit id-as"openshift-client" as"monitor|command" extract \
 #	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
-#    dlink"openshift-client-linux-%VERSION%.tar.gz" for \
+#    dlink"openshift-client-${platform}-%VERSION%.tar.gz" for \
 #        https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
 #
 
 zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
-#zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+#zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/${platform}/${arch}/kubectl
 # https://github.com/aws/aws-cli/issues/6920
-zinit snippet https://storage.googleapis.com/kubernetes-release/release/v1.24.1/bin/linux/amd64/kubectl
+zinit snippet https://storage.googleapis.com/kubernetes-release/release/v1.24.1/bin/${platform}/${arch}/kubectl
 
-zinit ice from"gh-r" as"program" bpick"k9s_Linux_amd64.tar.gz"
+zinit ice from"gh-r" as"program" bpick"k9s_${platform}_${arch}.tar.gz"
 zinit load derailed/k9s
 
 zinit ice from"gh-r" as"program"
 zinit load imhotepio/k9salpha
 
-zinit ice from"gh-r" as"program" mv"k3d-linux-amd64 -> k3d"
+zinit ice from"gh-r" as"program" mv"k3d-${platform}-${arch} -> k3d"
 zinit load k3d-io/k3d
 
-zinit ice from"gh-r" as"program" bpick"*_linux_amd64_*"
+zinit ice from"gh-r" as"program" bpick"*_${platform}_${arch}_*"
 zinit load kubernetes-sigs/kustomize
 
-zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-x86_64.AppImage -> zettlr"
+zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-${architecture}.AppImage -> zettlr"
 zinit load Zettlr/Zettlr
 
 #zinit id-as"helm" as="readurl|command" extract \
-#        pick"linux-amd64/helm" \
-#        dlink"https://get.helm.sh/helm-v%VERSION%-linux-amd64.tar.gz" \
+#        pick"${platform}-${arch}/helm" \
+#        dlink"https://get.helm.sh/helm-v%VERSION%-${platform}-${arch}.tar.gz" \
 #        for https://github.com/helm/helm/releases/
         #atload"helm plugin install https://github.com/databus23/helm-diff" \
 
-zinit ice from"gh-r" as"program" mv"helmfile_linux_amd64 -> helmfile"
+zinit ice from"gh-r" as"program" mv"helmfile_${platform}_${arch} -> helmfile"
 zinit load roboll/helmfile
 
 #zinit id-as=terraform as='monitor|command' extract \
 #    dlink0='/terraform/%VERSION%/' \
-#    dlink='/terraform/%VERSION%/terraform_%VERSION%_linux_amd64.zip' \
+#    dlink='/terraform/%VERSION%/terraform_%VERSION%_${platform}_${arch}.zip' \
 #    for \
 #        http://releases.hashicorp.com/terraform/
 
@@ -285,7 +297,7 @@ zinit light dalance/procs
 zinit ice as"command" from"gh-r" mv"sd* -> sd" pick"sd/sd"
 zinit light chmln/sd
 
-zinit ice from"gh-r" as"program" mv"fx_linux_amd64 -> fx"
+zinit ice from"gh-r" as"program" mv"fx_${platform}_${arch} -> fx"
 zinit load antonmedv/fx
 
 zinit ice from"gh-r" as"program"
@@ -297,7 +309,7 @@ zinit load mikefarah/yq
 zinit ice from"gh-r" as"program" bpick"youtube-dl"
 zinit load ytdl-org/youtube-dl
 
-zinit ice from"gh-r" as"program" bpick"yt-dlp_linux" mv"yt-dlp_linux -> yt-dlp"
+zinit ice from"gh-r" as"program" bpick"yt-dlp_${platform}" mv"yt-dlp_${platform} -> yt-dlp"
 zinit load yt-dlp/yt-dlp
 
 zinit ice from"gh-r" as"program" pick"bin/dog"
@@ -312,18 +324,18 @@ zinit load cli/cli
 zinit ice from"gh-r" as"program" pick"usr/local/bin/exo"
 zinit load exoscale/cli
 
-zinit ice from"gh-r" as"program" mv"terraform-docs-v*-linux-amd64 -> terraform-docs"
+zinit ice from"gh-r" as"program" mv"terraform-docs-v*-${platform}-${arch} -> terraform-docs"
 zinit load terraform-docs/terraform-docs
 
 zinit ice from"gh-r" as"program" pick"usr/local/bin/helm-docs"
 zinit load norwoodj/helm-docs
 
-zinit ice from"gh-r" as"program" bpick"lsd-*-x86_64-unknown-linux-gnu.tar.gz" \
-  mv"lsd-*-x86_64-unknown-linux-gnu -> lsd" pick"lsd/lsd"
+zinit ice from"gh-r" as"program" bpick"lsd-*-${architecture}-unknown-${platform}-gnu.tar.gz" \
+  mv"lsd-*-${architecture}-unknown-${platform}-gnu -> lsd" pick"lsd/lsd"
 zinit load lsd-rs/lsd
 
-zinit ice from"gh-r" as"program" bpick"krew-linux_amd64.tar.gz" \
-  mv"krew-linux_amd64 -> krew" pick"krew"
+zinit ice from"gh-r" as"program" bpick"krew-${platform}_${arch}.tar.gz" \
+  mv"krew-${platform}_${arch} -> krew" pick"krew"
 zinit load kubernetes-sigs/krew 
 
 #zinit ice from"gh-r" as"program"
@@ -332,14 +344,14 @@ zinit load kubernetes-sigs/krew
 zinit ice from"gh-r" as"program"
 zinit load gomatic/renderizer
 
-zinit ice from"gh-r" as"program" mv"opa_linux_amd64 -> opa"
+zinit ice from"gh-r" as"program" mv"opa_${platform}_${arch} -> opa"
 zinit load open-policy-agent/opa
 
-zinit ice from"gh-r" as"program" mv"kind-linux-amd64 -> kind"
+zinit ice from"gh-r" as"program" mv"kind-${platform}-${arch} -> kind"
 zinit load kubernetes-sigs/kind
 
 zinit ice from"gh-r" as"program" \
-  bpick"talosctl-linux-amd64" mv"talosctl-linux-amd64 -> talosctl"
+  bpick"talosctl-${platform}-${arch}" mv"talosctl-${platform}-${arch} -> talosctl"
 zinit load siderolabs/talos
 
 zinit ice from"gh-r" as"program"
@@ -358,13 +370,13 @@ zinit load cilium/hubble
 zinit ice from"gh-r" as"program"
 zinit load cilium/tetragon
 
-zinit ice from"gh-r" as"program" bpick"*linux*.zip"
+zinit ice from"gh-r" as"program" bpick"*${platform}*.zip"
 zinit load instruqt/cli
 
 zinit ice from"gh-r" as"program"
 zinit load hashicorp/packer
 
-zinit ice from"gh-r" as"program" mv"rke_linux-amd64 -> rke"
+zinit ice from"gh-r" as"program" mv"rke_${platform}-${arch} -> rke"
 zinit load rancher/rke
 
 zinit ice from"gh-r" as"program"
@@ -373,22 +385,22 @@ zinit load juruen/rmapi
 zinit ice from"gh-r" as"program"
 zinit load httpie/httpie
 
-zinit ice from"gh-r" as"program" bpick"*_linux_x86_64.tar.gz"
+zinit ice from"gh-r" as"program" bpick"*_${platform}_${architecture}.tar.gz"
 zinit load charmbracelet/glow
 
 zinit ice from"gh-r" as"program" \
-bpick"cfssl_*_linux_amd64" mv"cfssl_*_linux_amd64 -> cfssl"
+bpick"cfssl_*_${platform}_${arch}" mv"cfssl_*_${platform}_${arch} -> cfssl"
 zinit load cloudflare/cfssl
 
 zinit ice from"gh-r" as"program"
 zinit load bitnami-labs/sealed-secrets
 
 zinit ice from"gh-r" as"program" \
-bpick"kubeval-linux-amd64.tar.gz" pick"kubeval"
+bpick"kubeval-${platform}-${arch}.tar.gz" pick"kubeval"
 zinit load instrumenta/kubeval
 
 zinit ice from"gh-r" as"program" \
-bpick"kubectl-cilium_*_linux_amd64.tar.gz"
+bpick"kubectl-cilium_*_${platform}_${arch}.tar.gz"
 zinit load bmcustodio/kubectl-cilium
 
 zinit ice from"gh-r" as"program"
@@ -398,7 +410,7 @@ zinit ice from"gh-r" as"program"
 zinit load "opentofu/opentofu"
 
 #zinit ice from"gh-r" as"program" \
-#  bpick"cfssljson_*_linux_amd64" mv"cfssljson_*_linux_amd64 -> cfssljson" \
+#  bpick"cfssljson_*_${platform}_${arch}" mv"cfssljson_*_${platform}_${arch} -> cfssljson" \
 #zinit load cloudflare/cfssl
 
 
