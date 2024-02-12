@@ -159,7 +159,8 @@ case $architecture in
     arch="amd64"
     ;;
   arm64)
-    arch="aarch64"
+    architecture="aarch64"
+    arch="arm64"
     ;;
 esac
 
@@ -230,7 +231,7 @@ zinit ice from"gh-r" as"program"
 zinit load cyberark/summon
 
 zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
-zinit load mozilla/sops
+zinit load getsops/sops
 
 zinit ice from"gh-r" ver"v1.11.0" as"program" bpick"*-${platform}-${arch}.tar.gz" \
     pick"gopass-*/gopass"
@@ -257,7 +258,7 @@ zinit load imhotepio/k9salpha
 zinit ice from"gh-r" as"program" mv"k3d-${platform}-${arch} -> k3d"
 zinit load k3d-io/k3d
 
-zinit ice from"gh-r" as"program" bpick"*_${platform}_${arch}_*"
+zinit ice from"gh-r" as"program" bpick"*_${platform}_${arch}.tar.gz"
 zinit load kubernetes-sigs/kustomize
 
 zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-${architecture}.AppImage -> zettlr"
@@ -373,17 +374,16 @@ zinit load cilium/tetragon
 zinit ice from"gh-r" as"program" bpick"*${platform}*.zip"
 zinit load instruqt/cli
 
-zinit ice from"gh-r" as"program"
-zinit load hashicorp/packer
-
 zinit ice from"gh-r" as"program" mv"rke_${platform}-${arch} -> rke"
 zinit load rancher/rke
 
 zinit ice from"gh-r" as"program"
 zinit load juruen/rmapi
 
-zinit ice from"gh-r" as"program"
-zinit load httpie/httpie
+if [ "$platform" = "linux" ]; then
+  zinit ice from"gh-r" as"program"
+  zinit load httpie/httpie
+fi
 
 zinit ice from"gh-r" as"program" bpick"*_${platform}_${architecture}.tar.gz"
 zinit load charmbracelet/glow
