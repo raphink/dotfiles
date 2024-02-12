@@ -10,7 +10,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin:~/bin:~/.krew/bin
+export PATH=$PATH:/usr/local/go/bin:~/bin:~/.krew/bin:/opt/homebrew/bin:/Library/TeX/Distributions/TeXLive-2023.texdist/Contents/Programs/arm64
 export GOPATH=$HOME
 
 # Path to your oh-my-zsh installation.
