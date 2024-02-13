@@ -382,6 +382,9 @@ zinit load juruen/rmapi
 
 if [ "$platform" = "linux" ]; then
   zinit ice from"gh-r" as"program"
+  zinit load hashicorp/packer
+
+  zinit ice from"gh-r" as"program"
   zinit load httpie/httpie
 fi
 
