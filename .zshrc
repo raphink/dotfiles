@@ -412,6 +412,9 @@ zinit load fluxcd/flux2
 zinit ice from"gh-r" as"program"
 zinit load "opentofu/opentofu"
 
+zinit ice from"gh-r" as"program"
+zinit load "Netflix/bpftop"
+
 #zinit ice from"gh-r" as"program" \
 #  bpick"cfssljson_*_${platform}_${arch}" mv"cfssljson_*_${platform}_${arch} -> cfssljson" \
 #zinit load cloudflare/cfssl
