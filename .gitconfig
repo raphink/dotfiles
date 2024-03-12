@@ -49,6 +49,8 @@
 	autoSetupRemote = true
 [rebase]
 	autosquash = true
+[rerere]
+  enabled = true
 
 [help]
 	autoCorrect = 30
