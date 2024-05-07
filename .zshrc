@@ -233,16 +233,6 @@ zinit load cyberark/summon
 zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
 zinit load getsops/sops
 
-zinit ice from"gh-r" ver"v1.11.0" as"program" bpick"*-${platform}-${arch}.tar.gz" \
-    pick"gopass-*/gopass"
-    #atclone"./gopass completion zsh > _gopass" atpull'%atclone' \
-zinit load gopasspw/gopass
-
-#zinit id-as"openshift-client" as"monitor|command" extract \
-#	dlink0'!%VERSION%~%(unreleased|stable.*|latest.*|fast.*|candidate.*|.*-rc.1|.*-rc.2|.*-rc.3|.*-rc.4)%' \
-#    dlink"openshift-client-${platform}-%VERSION%.tar.gz" for \
-#        https://mirror.openshift.com/pub/openshift-v4/clients/ocp/
-#
 
 zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
 #zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/${platform}/${arch}/kubectl
@@ -331,10 +321,6 @@ zinit load terraform-docs/terraform-docs
 zinit ice from"gh-r" as"program" pick"usr/local/bin/helm-docs"
 zinit load norwoodj/helm-docs
 
-zinit ice from"gh-r" as"program" bpick"lsd-*-${architecture}-unknown-${platform}-gnu.tar.gz" \
-  mv"lsd-*-${architecture}-unknown-${platform}-gnu -> lsd" pick"lsd/lsd"
-zinit load lsd-rs/lsd
-
 zinit ice from"gh-r" as"program" bpick"krew-${platform}_${arch}.tar.gz" \
   mv"krew-${platform}_${arch} -> krew" pick"krew"
 zinit load kubernetes-sigs/krew 
@@ -397,14 +383,6 @@ zinit load cloudflare/cfssl
 
 zinit ice from"gh-r" as"program"
 zinit load bitnami-labs/sealed-secrets
-
-zinit ice from"gh-r" as"program" \
-bpick"kubeval-${platform}-${arch}.tar.gz" pick"kubeval"
-zinit load instrumenta/kubeval
-
-zinit ice from"gh-r" as"program" \
-bpick"kubectl-cilium_*_${platform}_${arch}.tar.gz"
-zinit load bmcustodio/kubectl-cilium
 
 zinit ice from"gh-r" as"program"
 zinit load fluxcd/flux2
