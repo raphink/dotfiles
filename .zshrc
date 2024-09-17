@@ -433,6 +433,10 @@ source $HOME/.cargo/env
 # Instruqt
 alias instruqt-dev=~/src/github.com/isovalent/instruqt/tracks/scripts/instruqt-dev.sh
 
+# Kubecolor
+alias kubectl=kubecolor
+compdef kubecolor=kubectl
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
