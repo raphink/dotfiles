@@ -139,7 +139,8 @@ alias mv='mv -i'
 
 alias please='sudo $(history -p \!\!)'
 
-alias d='docker'
+alias docker='podman'
+alias d='podman'
 alias t='terraform'
 alias be='bundle exec'
 alias s='summon'
