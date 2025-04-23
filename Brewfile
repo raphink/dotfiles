@@ -35,6 +35,7 @@ cask "inkscape"
 
 # --- Fonts ---
 cask "font-fira-code"
+cask "font-meslo-for-powerlevel10k"
 
 # --- VS Code Extensions ---
 vscode "vscodevim.vim"
