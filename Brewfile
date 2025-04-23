@@ -28,6 +28,9 @@ cask "slack"
 cask "raycast"
 cask "rectangle"
 
+cask "gimp"
+cask "inkscape"
+
 # --- Fonts ---
 tap "homebrew/cask-fonts"
 cask "font-fira-code"
