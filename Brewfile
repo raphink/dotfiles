@@ -13,6 +13,8 @@ brew "node"
 brew "python"
 brew "zinit"
 
+brew "go"
+
 brew "diff-so-fancy"
 
 # --- Kubernetes Tools ---
@@ -32,7 +34,6 @@ cask "gimp"
 cask "inkscape"
 
 # --- Fonts ---
-tap "homebrew/cask-fonts"
 cask "font-fira-code"
 
 # --- VS Code Extensions ---
