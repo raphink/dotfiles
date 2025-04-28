@@ -30,6 +30,7 @@ cask "google-chrome"
 cask "slack"
 cask "raycast"
 cask "rectangle"
+cask "graphql-playground"
 
 cask "gimp"
 cask "inkscape"
