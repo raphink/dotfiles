@@ -16,6 +16,7 @@ brew "zinit"
 brew "go"
 
 brew "diff-so-fancy"
+brew "folderify"
 
 # --- Kubernetes Tools ---
 brew "kubectl"
