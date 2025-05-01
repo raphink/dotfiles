@@ -41,3 +41,6 @@ cask "font-meslo-for-powerlevel10k"
 
 # --- VS Code Extensions ---
 vscode "vscodevim.vim"
+
+# --- SDK ---
+cask "google-cloud-sdk"
