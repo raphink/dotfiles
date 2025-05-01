@@ -32,6 +32,7 @@ cask "raycast"
 cask "rectangle"
 cask "graphql-playground"
 cask "docker"
+cask "finicky"
 
 cask "gimp"
 cask "inkscape"
