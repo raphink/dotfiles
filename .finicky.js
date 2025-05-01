@@ -12,7 +12,7 @@ module.exports = {
             browser: {
                 name: "Google Chrome",
                 // Perso
-                profile: "Profile 1",
+                profile: "Default",
             },
         },
         {
@@ -23,7 +23,7 @@ module.exports = {
             browser: {
                 name: "Google Chrome",
                 // Work
-                profile: "Default",
+                profile: "Profile 1",
             },
         }
     ],
