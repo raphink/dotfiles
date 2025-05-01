@@ -31,6 +31,7 @@ cask "slack"
 cask "raycast"
 cask "rectangle"
 cask "graphql-playground"
+cask "docker"
 
 cask "gimp"
 cask "inkscape"
