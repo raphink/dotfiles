@@ -1,5 +1,6 @@
 brew "imagemagick"
 brew "gnupg"
+brew "weasyprint"
 
 # --- Core CLI Tools ---
 brew "git"
