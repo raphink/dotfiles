@@ -20,6 +20,7 @@ brew "zsh-autosuggestions"
 brew "powerlevel10k"
 
 brew "go"
+brew "golangci-lint"
 
 brew "diff-so-fancy"
 brew "folderify"
