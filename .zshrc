@@ -224,10 +224,6 @@ zinit load siderolabs/talos
 zinit ice from"gh-r" as"program" mv"rke_${platform}-${arch} -> rke"
 zinit load rancher/rke
 
-zinit ice from"gh-r" as"program" \
-bpick"cfssljson_*_${platform}_${arch}" mv"cfssljson_*_${platform}_${arch} -> cfssljson"
-zinit load cloudflare/cfssl
-
 zinit ice from"gh-r" as"program"
 zinit load "Netflix/bpftop"
 
