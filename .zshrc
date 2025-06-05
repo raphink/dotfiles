@@ -201,121 +201,28 @@ zinit ice blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice depth=1
-zinit light romkatv/powerlevel10k
-
 zinit ice as"program" pick"bin/git-dsf"
-zinit light zdharma-continuum/zsh-diff-so-fancy
-
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
-    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+    atload'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"'
 zinit light trapd00r/LS_COLORS
 alias ls='ls --color=auto'
 
-#zinit ice from"gh-r" as"program" mv"direnv* -> direnv" \
-#    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-#    pick"direnv" src="zhook.zsh"
-#zinit load direnv/direnv
-
-zinit ice from"gh-r" as"program" bpick"yq_${platform}_${arch}.tar.gz" mv"yq_${platform}_${arch} -> yq"
-zinit load mikefarah/yq
-
-zinit ice from"gh-r" as"program"
-zinit load simulot/aspiratv
-
-zinit ice from"gh-r" ver"v2.1.0" as"program" mv"argocd-${platform}-${arch} -> argocd"
-zinit load argoproj/argo-cd
-
-zinit ice from"gh-r" as"program"
-zinit load cyberark/summon
-
-zinit ice from"gh-r" as"program" pick"usr/local/bin/sops"
-zinit load getsops/sops
-
-
-zinit ice lucid wait'1' id-as'kubectl' as"null" sbin"kubectl"
-#zinit snippet https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/${platform}/${arch}/kubectl
-# https://github.com/aws/aws-cli/issues/6920
-zinit snippet https://storage.googleapis.com/kubernetes-release/release/v1.24.1/bin/${platform}/${arch}/kubectl
-
-zinit ice from"gh-r" as"program" bpick"k9s_${platform}_${arch}.tar.gz"
-zinit load derailed/k9s
-
+# Tools that remain in zinit (not available in Homebrew or need special handling)
 zinit ice from"gh-r" as"program"
 zinit load imhotepio/k9salpha
-
-zinit ice from"gh-r" as"program" mv"k3d-${platform}-${arch} -> k3d"
-zinit load k3d-io/k3d
-
-zinit ice from"gh-r" as"program" bpick"*_${platform}_${arch}.tar.gz"
-zinit load kubernetes-sigs/kustomize
-
-zinit ice from"gh-r" as"program" mv"Zettlr-1.8.7-${architecture}.AppImage -> zettlr"
-zinit load Zettlr/Zettlr
-
-#zinit id-as"helm" as="readurl|command" extract \
-#        pick"${platform}-${arch}/helm" \
-#        dlink"https://get.helm.sh/helm-v%VERSION%-${platform}-${arch}.tar.gz" \
-#        for https://github.com/helm/helm/releases/
-        #atload"helm plugin install https://github.com/databus23/helm-diff" \
-
-zinit ice from"gh-r" as"program" mv"helmfile_${platform}_${arch} -> helmfile"
-zinit load roboll/helmfile
-
-#zinit id-as=terraform as='monitor|command' extract \
-#    dlink0='/terraform/%VERSION%/' \
-#    dlink='/terraform/%VERSION%/terraform_%VERSION%_${platform}_${arch}.zip' \
-#    for \
-#        http://releases.hashicorp.com/terraform/
-
-zinit ice from"gh-r" as"program"
-zinit load alecthomas/chroma
-
-# ogham/exa, replacement for ls
-zinit ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
-zinit light ogham/exa
-
-zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
-zinit light sharkdp/fd
-
-zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
-zinit light sharkdp/bat
-
-zinit ice as"command" from"gh-r" mv"procs* -> procs" pick"usr/bin/procs"
-zinit light dalance/procs
-
-zinit ice as"command" from"gh-r" mv"sd* -> sd" pick"sd/sd"
-zinit light chmln/sd
-
-zinit ice from"gh-r" as"program" mv"fx_${platform}_${arch} -> fx"
-zinit load antonmedv/fx
 
 zinit ice from"gh-r" as"program"
 zinit load andreazorzetto/yh
 
-zinit ice from"gh-r" as"program"
-zinit load mikefarah/yq
-
-zinit ice from"gh-r" as"program" bpick"youtube-dl"
-zinit load ytdl-org/youtube-dl
-
-zinit ice from"gh-r" as"program" bpick"yt-dlp_${platform}" mv"yt-dlp_${platform} -> yt-dlp"
-zinit load yt-dlp/yt-dlp
-
-zinit ice from"gh-r" as"program" pick"bin/dog"
-zinit load ogham/dog
-
-zinit ice from"gh-r" as"program" pick"usr/local/bin/bin/glab"
-zinit load profclems/glab
-
-zinit ice from"gh-r" as"program" pick"usr/bin/gh"
-zinit load cli/cli
-
 zinit ice from"gh-r" as"program" pick"usr/local/bin/exo"
 zinit load exoscale/cli
 
-zinit ice from"gh-r" as"program" mv"terraform-docs-v*-${platform}-${arch} -> terraform-docs"
-zinit load terraform-docs/terraform-docs
+zinit ice from"gh-r" as"program"
+zinit load gomatic/renderizer
+
+zinit ice from"gh-r" as"program"
+zinit load juruen/rmapi
 
 zinit ice from"gh-r" as"program" pick"usr/local/bin/helm-docs"
 zinit load norwoodj/helm-docs
@@ -324,99 +231,34 @@ zinit ice from"gh-r" as"program" bpick"krew-${platform}_${arch}.tar.gz" \
   mv"krew-${platform}_${arch} -> krew" pick"krew"
 zinit load kubernetes-sigs/krew 
 
-#zinit ice from"gh-r" as"program"
-#zinit load jrhouston/tfk8s
-
-zinit ice from"gh-r" as"program"
-zinit load gomatic/renderizer
-
-zinit ice from"gh-r" as"program" mv"opa_${platform}_${arch} -> opa"
-zinit load open-policy-agent/opa
-
-zinit ice from"gh-r" as"program" mv"kind-${platform}-${arch} -> kind"
-zinit load kubernetes-sigs/kind
-
 zinit ice from"gh-r" as"program" \
   bpick"talosctl-${platform}-${arch}" mv"talosctl-${platform}-${arch} -> talosctl"
 zinit load siderolabs/talos
 
-zinit ice from"gh-r" as"program"
-zinit load nektos/act
-
-zinit ice from"gh-r" as"program"
-zinit load goreleaser/goreleaser
-
-# Pin version to avoid rollback to v0.10 branch on support releases
-zinit ice from"gh-r" ver"v0.16.22" as"program"
-zinit load cilium/cilium-cli
-
-zinit ice from"gh-r" as"program"
-zinit load cilium/hubble
-
-zinit ice from"gh-r" as"program"
-zinit load cilium/tetragon
-
-zinit ice from"gh-r" as"program" bpick"*${platform}*.zip"
-zinit load instruqt/cli
-
 zinit ice from"gh-r" as"program" mv"rke_${platform}-${arch} -> rke"
 zinit load rancher/rke
 
-zinit ice from"gh-r" as"program"
-zinit load juruen/rmapi
-
-if [ "$platform" = "linux" ]; then
-  zinit ice from"gh-r" as"program"
-  zinit load hashicorp/packer
-
-  zinit ice from"gh-r" as"program"
-  zinit load httpie/httpie
-fi
-
-zinit ice from"gh-r" as"program" bpick"*_${platform}_${architecture}.tar.gz"
-zinit load charmbracelet/glow
-
 zinit ice from"gh-r" as"program" \
-bpick"cfssl_*_${platform}_${arch}" mv"cfssl_*_${platform}_${arch} -> cfssl"
+bpick"cfssljson_*_${platform}_${arch}" mv"cfssljson_*_${platform}_${arch} -> cfssljson"
 zinit load cloudflare/cfssl
-
-zinit ice from"gh-r" as"program"
-zinit load bitnami-labs/sealed-secrets
-
-zinit ice from"gh-r" as"program"
-zinit load fluxcd/flux2
-
-zinit ice from"gh-r" as"program"
-zinit load "opentofu/opentofu"
 
 zinit ice from"gh-r" as"program"
 zinit load "Netflix/bpftop"
 
+zinit ice from"gh-r" as"program" bpick"*${platform}*.zip"
+zinit load instruqt/cli
+
+# Keep summon in zinit since it's not available in Homebrew
 zinit ice from"gh-r" as"program"
-zinit load "eksctl-io/eksctl"
+zinit load cyberark/summon
 
-#zinit ice from"gh-r" as"program" \
-#  bpick"cfssljson_*_${platform}_${arch}" mv"cfssljson_*_${platform}_${arch} -> cfssljson" \
-#zinit load cloudflare/cfssl
+# Keep tetragon in zinit since it's not available in Homebrew
+zinit ice from"gh-r" as"program"
+zinit load cilium/tetragon
 
-
-# Two regular plugins loaded without investigating.
-zinit light zsh-users/zsh-autosuggestions
-zinit ice atinit'zicompinit'
-zinit light zdharma-continuum/fast-syntax-highlighting
-
-# Gems
-zinit ice gem'!jgrep'
+# Ruby Gems - keeping github_changelog_generator, removing jgrep and travis
 zinit ice gem'!github_changelog_generator'
-zinit ice gem'!travis'
 zinit load zdharma-continuum/null
-
-
-# Zfz
-zinit ice from"gh-r" as"program"
-zinit load junegunn/fzf
-zinit pack"default+keys" for fzf
-
 
 function sysdump-kas() {
 docker run --rm -v "$(readlink -f ${1}):/sysdump:ro" -p 8080:8080 quay.io/isovalent-dev/sysdump-kas:latest
