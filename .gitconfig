@@ -18,8 +18,8 @@
 	diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 
 [commit]
-	gpgsign = true
-	template = /home/raphink/.git-templates/commit-template
+	#gpgsign = true
+	template = /Users/raphink/.git-templates/commit-template
 
 [color]
 	ui = auto
@@ -72,7 +72,7 @@
 #	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 [init]
-	templateDir = /home/raphink/.git-templates/git-secrets
+	templateDir = /Users/raphink/.git-templates/git-secrets
 [format]
 	signoff = true
 [filter "lfs"]
@@ -87,4 +87,4 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [diff "image"]
-	command = /home/raphink/src/github.com/ewanmellor/git-diff-image/git_diff_image
+	command = /Users/raphink/src/github.com/ewanmellor/git-diff-image/git_diff_image

@@ -47,3 +47,7 @@ vscode "vscodevim.vim"
 
 # --- SDK ---
 cask "google-cloud-sdk"
+
+# --- Hashicorp ---
+tap "hashicorp/tap"
+brew "hashicorp/tap/packer"

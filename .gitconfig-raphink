@@ -4,5 +4,5 @@
 	signingkey = 10CB2A8D
 
 [commit]
-	gpgsign = true
-	template = /home/raphink/.git-templates/raphink-commit-template
+	#gpgsign = true
+	template = /Users/raphink/.git-templates/raphink-commit-template
