@@ -14,7 +14,7 @@ export PATH=$PATH:/usr/local/go/bin:~/bin:~/.krew/bin:/opt/homebrew/bin:/Library
 export GOPATH=$HOME
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/raphink/.oh-my-zsh"
+#export ZSH="/home/raphink/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,9 +98,6 @@ plugins=(
 )
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source /etc/bash_completion.d/azure-cli
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -201,6 +198,8 @@ zinit ice blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
 zinit ice as"program" pick"bin/git-dsf"
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
@@ -209,27 +208,14 @@ zinit light trapd00r/LS_COLORS
 alias ls='ls --color=auto'
 
 # Tools that remain in zinit (not available in Homebrew or need special handling)
-zinit ice from"gh-r" as"program"
-zinit load imhotepio/k9salpha
-
-zinit ice from"gh-r" as"program"
-zinit load andreazorzetto/yh
-
 zinit ice from"gh-r" as"program" pick"usr/local/bin/exo"
 zinit load exoscale/cli
-
-zinit ice from"gh-r" as"program"
-zinit load gomatic/renderizer
 
 zinit ice from"gh-r" as"program"
 zinit load juruen/rmapi
 
 zinit ice from"gh-r" as"program" pick"usr/local/bin/helm-docs"
 zinit load norwoodj/helm-docs
-
-zinit ice from"gh-r" as"program" bpick"krew-${platform}_${arch}.tar.gz" \
-  mv"krew-${platform}_${arch} -> krew" pick"krew"
-zinit load kubernetes-sigs/krew 
 
 zinit ice from"gh-r" as"program" \
   bpick"talosctl-${platform}-${arch}" mv"talosctl-${platform}-${arch} -> talosctl"
