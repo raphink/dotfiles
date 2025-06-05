@@ -61,6 +61,7 @@ brew "eksctl"
 tap "hashicorp/tap"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
+brew "terraform-docs"
 
 # --- Cloud Tools ---
 # Note: summon not available in Homebrew
