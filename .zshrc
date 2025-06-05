@@ -117,9 +117,6 @@ export EDITOR='vim'
 # Force emacs mode for shell navigation (even with vim as editor)
 bindkey -e
 
-# default printer
-export PRINTER=HP-Color-LaserJet-CM3530-MFP
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
