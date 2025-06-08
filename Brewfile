@@ -2,6 +2,7 @@ brew "imagemagick"
 brew "gnupg"
 brew "weasyprint"
 brew "poppler"
+brew "codespell"
 
 # --- Core CLI Tools ---
 brew "git"
