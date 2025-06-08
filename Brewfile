@@ -3,6 +3,7 @@ brew "gnupg"
 brew "weasyprint"
 brew "poppler"
 brew "codespell"
+brew "checkbashisms"
 
 # --- Core CLI Tools ---
 brew "git"
