@@ -1,0 +1,10 @@
+{
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco,, 'Courier New', monospace",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "editor.fontLigatures": true,
+}
