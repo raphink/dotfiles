@@ -4,6 +4,7 @@ brew "weasyprint"
 brew "poppler"
 brew "codespell"
 brew "checkbashisms"
+brew "yamllint"
 
 # --- Core CLI Tools ---
 brew "git"
