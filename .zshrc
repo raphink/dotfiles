@@ -227,9 +227,6 @@ zinit load rancher/rke
 zinit ice from"gh-r" as"program"
 zinit load "Netflix/bpftop"
 
-zinit ice from"gh-r" as"program" bpick"*${platform}*.zip"
-zinit load instruqt/cli
-
 # Keep summon in zinit since it's not available in Homebrew
 zinit ice from"gh-r" as"program"
 zinit load cyberark/summon
