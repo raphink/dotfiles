@@ -67,6 +67,10 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "terraform-docs"
 
+# --- Labs ---
+tap "instruqt/tap"
+brew "instruqt"
+
 # --- Cloud Tools ---
 # Note: summon not available in Homebrew
 
