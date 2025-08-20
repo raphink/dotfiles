@@ -22,6 +22,7 @@ brew "bat"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "powerlevel10k"
+brew "tree"
 
 brew "go"
 brew "golangci-lint"
