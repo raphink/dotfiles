@@ -397,9 +397,9 @@
       # Otherwise show the first 12 … the last 12.
       # Tip: To always show local branch name in full without truncation, delete the next line.
       (( $#branch > 32 )) && branch[13,-13]="…"  # <-- this line
-      local pr_number="$(git_prompt_pr_number)"
+      #local pr_number="$(git_prompt_pr_number)"
       res+="${clean}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}${branch//\%/%%}"
-      [[ -n $pr_number ]] && res+=" (#${pr_number})"
+      #[[ -n $pr_number ]] && res+=" (#${pr_number})"
     fi
 
     if [[ -n $VCS_STATUS_TAG
