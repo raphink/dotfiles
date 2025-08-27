@@ -205,6 +205,9 @@ zstyle ':completion' menu select
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
+# Load instruqt completion
+autoload -U _instruqt && compdef _instruqt instruqt
+
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
