@@ -23,6 +23,7 @@ brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "powerlevel10k"
 brew "tree"
+brew "colordiff"
 
 brew "go"
 brew "golangci-lint"
