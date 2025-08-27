@@ -19,4 +19,10 @@
     "terminal.integrated.experimentalUseTitleEvent": false,
     "terminal.integrated.enableVisualBell": false,
     "terminal.integrated.scrollback": 10000,
+    "go.toolsManagement.autoUpdate": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+
+    "git.blame.statusBarItem.enabled": true,
+    "git.blame.line.enabled": true,
+    "git.blame.editorDecoration.enabled": true,
 }
