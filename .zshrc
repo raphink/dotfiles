@@ -99,6 +99,14 @@ plugins=(
 autoload -U compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
+# Show PR number if branch has an open PR
+function git_prompt_pr_number() {
+  if command -v gh >/dev/null 2>&1; then
+    pr=$(gh pr view --json number -q '.number' 2>/dev/null)
+    [[ -n "$pr" ]] && echo "$pr"
+  fi
+}
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
