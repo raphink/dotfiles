@@ -208,6 +208,8 @@ zinit light zsh-users/zsh-completions
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
+zinit light mafredri/zsh-async
+
 zinit ice as"program" pick"bin/git-dsf"
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
