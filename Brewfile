@@ -5,6 +5,8 @@ brew "poppler"
 brew "codespell"
 brew "checkbashisms"
 brew "yamllint"
+brew "pandoc"
+brew "mactex"
 
 # --- Core CLI Tools ---
 brew "git"
@@ -45,6 +47,7 @@ brew "chroma"           # Code syntax highlighter
 
 # --- Dev Tools ---
 brew "goreleaser"
+brew "qemu"
 
 # --- Testing tools ---
 brew "httpie"
