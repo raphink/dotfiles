@@ -6,7 +6,7 @@ brew "codespell"
 brew "checkbashisms"
 brew "yamllint"
 brew "pandoc"
-brew "mactex"
+cask "mactex"
 
 # --- Core CLI Tools ---
 brew "git"
@@ -98,7 +98,7 @@ cask "slack"
 cask "raycast"
 cask "rectangle"
 cask "graphql-playground"
-cask "docker"
+cask "docker-desktop"
 cask "finicky"
 
 cask "gimp"
@@ -112,4 +112,4 @@ cask "font-meslo-for-powerlevel10k"
 vscode "vscodevim.vim"
 
 # --- SDK ---
-cask "google-cloud-sdk"
+cask "gcloud-cli"
