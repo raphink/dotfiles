@@ -101,6 +101,11 @@ cask "graphql-playground"
 cask "docker-desktop"
 cask "finicky"
 
+# --- Calendr ---
+tap "pakerwreah/calendr"
+cask "pakerwreah/calendr/calendr"
+
+
 cask "gimp"
 cask "inkscape"
 
