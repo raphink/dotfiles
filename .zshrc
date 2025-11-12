@@ -149,10 +149,10 @@ alias be='bundle exec'
 alias s='summon'
 compdef summon=sudo
 
-alias l='lsd'
-alias la='lsd -a'
-alias ll='lsd -lah'
-alias ls='lsd --color=auto'
+alias l='eza'
+alias la='eza -a'
+alias ll='eza -lah'
+alias ls='eza --color=auto'
 
 
 ## Useful variables for installs
@@ -274,3 +274,8 @@ compdef kubecolor=kubectl
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi

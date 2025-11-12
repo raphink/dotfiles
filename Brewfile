@@ -35,6 +35,7 @@ brew "folderify"
 
 # --- Additional CLI Tools (moved from zinit) ---
 brew "eza"              # Modern replacement for ls (exa successor)
+brew "lsd"              # Colorful ls clone
 brew "procs"            # Modern replacement for ps
 brew "sd"               # Modern replacement for sed
 brew "doggo"            # Modern replacement for dig (dog alternative)
