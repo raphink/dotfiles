@@ -50,6 +50,7 @@ brew "chroma"           # Code syntax highlighter
 # --- Dev Tools ---
 brew "goreleaser"
 brew "qemu"
+brew "specify"
 
 # --- Testing tools ---
 brew "httpie"
