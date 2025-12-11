@@ -10,6 +10,7 @@ cask "mactex"
 
 # --- Core CLI Tools ---
 brew "git"
+brew "git-secrets"
 brew "wget"
 brew "htop"
 brew "tmux"
