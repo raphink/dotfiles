@@ -18,6 +18,7 @@ brew "ripgrep"
 brew "gh"               # GitHub CLI
 brew "node"
 brew "python"
+brew "uv"
 brew "zinit"
 brew "fd"
 brew "bat"
@@ -66,6 +67,7 @@ brew "flux"
 brew "argocd"
 brew "kubeseal"         # Sealed secrets CLI
 brew "eksctl"
+brew "openshift-cli"
 
 # --- HashiCorp Tools ---
 tap "hashicorp/tap"
