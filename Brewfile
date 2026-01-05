@@ -7,6 +7,7 @@ brew "checkbashisms"
 brew "yamllint"
 brew "pandoc"
 cask "mactex"
+cask "stats"
 
 # --- Core CLI Tools ---
 brew "git"
