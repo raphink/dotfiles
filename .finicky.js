@@ -21,6 +21,15 @@ export default {
       },
     },
     {
+      match: (url) => [
+        "console.cloud.google.com",
+      ].includes(url.hostname),
+      browser: {
+        name: "Google Chrome",
+        profile: "Cisco",
+      },  
+    },
+    {
       match: (url, { opener }) => {
         console.log("Received URL", url.href, "from opener:", opener?.bundleId);
         return opener?.bundleId === "com.tinyspeck.slackmacgap";
