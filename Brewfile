@@ -8,6 +8,7 @@ brew "yamllint"
 brew "pandoc"
 cask "mactex"
 cask "stats"
+cask "signal"
 
 # --- Core CLI Tools ---
 brew "git"
