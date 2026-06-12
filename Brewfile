@@ -30,6 +30,7 @@ brew "zsh-autosuggestions"
 brew "powerlevel10k"
 brew "tree"
 brew "colordiff"
+brew "watch"
 
 brew "go"
 brew "golangci-lint"
