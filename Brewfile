@@ -80,6 +80,10 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "terraform-docs"
 
+# --- Raphink ---
+tap "raphink/tap"
+brew "raphink/tap/panelgen"
+
 # --- Labs ---
 tap "instruqt/tap"
 brew "instruqt"
