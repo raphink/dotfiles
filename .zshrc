@@ -283,6 +283,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Jump to an existing PR worktree, or check it out if none exists.
 ghcd() {
+  if [[ -z "$1" ]]; then
+    print "Usage: ghcd <PR number, URL, or branch>" >&2
+    return 2
+  fi
+
   local branch path
   branch=$(command gh pr view "$1" --json headRefName --jq .headRefName) || return
   path=$(git worktree list --porcelain | awk -v ref="refs/heads/$branch" '
