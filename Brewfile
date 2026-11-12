@@ -130,3 +130,4 @@ vscode "vscodevim.vim"
 
 # --- SDK ---
 cask "gcloud-cli"
+brew "azure-cli"
