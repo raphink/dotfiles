@@ -279,3 +279,20 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/home
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$HOME/.local/bin:$PATH"
+
+# Jump to an existing PR worktree, or check it out if none exists.
+ghcd() {
+  local branch path
+  branch=$(command gh pr view "$1" --json headRefName --jq .headRefName) || return
+  path=$(git worktree list --porcelain | awk -v ref="refs/heads/$branch" '
+    /^worktree / { path = substr($0, 9) }
+    $0 == "branch " ref { print path; exit }
+  ')
+
+  if [[ -n "$path" ]]; then
+    cd "$path"
+  else
+    command gh pr checkout "$1"
+  fi
+}
